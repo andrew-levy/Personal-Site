@@ -83,6 +83,13 @@ const App = props =>  {
     });
   }
 
+  const closeModal = () => {
+      $('#modal').css('display', 'none')
+  }
+  const openModal = () => {
+    $('#modal').rattr('display', 'block')
+  }
+
   // Did Mount
   useEffect(
     () => {
@@ -97,6 +104,7 @@ const App = props =>  {
   useEffect(
     () => {
       handleChangeTabs()
+      
     }
   );
 
@@ -104,8 +112,15 @@ const App = props =>  {
 
   return (
       <div className="App-header">
+        <div id="modal" className="modal">
+          <div className="modal-content">
+            <button onClick={closeModal} className="close">&times;</button>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
         <Nav activeTab={activeTab} list={["Projects", "Skills", "Contact"]}></Nav>
         <About></About>
+
         {/* Begin Project Cards */}
         <div id="Projects">
           <h2 className="text large center">Projects</h2>
