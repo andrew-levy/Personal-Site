@@ -25,9 +25,7 @@ const Nav = props => {
 }
 
 const Card = props => {
-
   return (
-
     <div className="card fade-in">
       <a href={props.link}>
         <img width="300px" src={props.image} alt="" />
@@ -43,7 +41,7 @@ const Card = props => {
 
 const Contact = props => {
   return (
-    <div className="contact-container" id="Contact">
+    <div id="Contact" className="contact-container" id="Contact">
       <h2 className="text large">Contact Me</h2>
 
     </div>
@@ -52,14 +50,14 @@ const Contact = props => {
 
 const About = props => {
   return (
-    <div className="about-container" id="About">
+    <div id="About" className="about-container" id="About">
       <img className="me" src={me} alt="" width="200px" />
       <div className="text-area">
-        <h2 className="text large">Andrew Levy</h2>
+        <h2 className="text large collapse-bottom">Andrew Levy</h2>
         <p className="text medium"> Mathematician/Software Developer</p>
-        <a href="#">
-          <img width="60px" src={logo} alt="Resume" />
-        </a>
+        <p className="text small"> 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        </p>
       </div>
     </div>
   );
@@ -83,12 +81,6 @@ const App = props =>  {
     });
   }
 
-  const closeModal = () => {
-      $('#modal').css('display', 'none')
-  }
-  const openModal = () => {
-    $('#modal').rattr('display', 'block')
-  }
 
   // Did Mount
   useEffect(
@@ -111,13 +103,8 @@ const App = props =>  {
 
 
   return (
+    
       <div className="App-header">
-        <div id="modal" className="modal">
-          <div className="modal-content">
-            <button onClick={closeModal} className="close">&times;</button>
-            <p>Some text in the Modal..</p>
-          </div>
-        </div>
         <Nav activeTab={activeTab} list={["Projects", "Skills", "Contact"]}></Nav>
         <About></About>
 
