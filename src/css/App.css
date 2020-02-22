@@ -22,6 +22,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -124,6 +125,10 @@
   color: white
 }
 
+.card img {
+  border-radius: 4px;
+}
+
 .card:hover {
   box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
 }
@@ -177,3 +182,5 @@
 .collapse-top {
   margin-top: 0em;
 }
+
+
