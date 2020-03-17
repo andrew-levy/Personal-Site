@@ -29,6 +29,13 @@ const CardHolder = () => {
                 link="https://github.com/andrew-levy/Twitter-React-Express" 
             >
             </Card>
+            <Card
+                title="WeeTweet"
+                subtext="React + Express App using the Twitter API"
+                image={molecular}
+                link="https://github.com/andrew-levy/Twitter-React-Express" 
+            >
+            </Card>
           </div>
       </div>
       

@@ -18,7 +18,7 @@ const Card = props => {
         <Tilt options={tiltOpts}>
             <div className="card fade-in">
                 <a href={props.link}>
-                <img width="300px" src={props.image} alt="" />
+                <img width="250px" src={props.image} alt="" />
                 <div className="text-container code">
                     <h2>{props.title}</h2>
                     <p>{props.subtext}</p>
